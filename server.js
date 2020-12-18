@@ -47,6 +47,10 @@ app.get("/", (req, resp) => {
   resp.json({ message: "welcome to sample node jwt auth application" });
 });
 
+// routes
+require("./app/routes/auth.routes")(app);
+require("./app/routes/user.routes")(app);
+
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
