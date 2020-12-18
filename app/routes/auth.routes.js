@@ -2,7 +2,7 @@ const { verifySignUp } = require("../middleware");
 const controller = require("../controllers/auth.controller");
 
 module.exports = function (app) {
-  app.use(function (req, resp, net) {
+  app.use(function (req, resp, next) {
     resp.header(
       "Access-Control-Allow-Headers",
       "x-access-token, Origin, Content-Type, Accept"
